@@ -158,7 +158,7 @@ const MainScreen = ({ navigation }) => {
                                     <Text style={{color: 'white', fontWeight: 'bold', fontSize: 17}}>{fileContent.content}</Text>
                                     <View style={{flexDirection: 'row', margin: 20}}>
                                         <LogoButton onPress={() => Linking.openURL('tel:+34601027077')} style={{backgroundColor: 'black', marginRight: 10}} name='phone' size={30} color='white'/>
-                                        <LogoButton onPress={() => Linking.openURL('mailto:davidnichero@gmail.com')} style={{backgroundColor: 'black', marginLeft: 10}} name='envelope' size={30} color='white'/>
+                                        <LogoButton onPress={() => Linking.openURL('mailto:davidrodriguez.dev@gmail.com')} style={{backgroundColor: 'black', marginLeft: 10}} name='envelope' size={30} color='white'/>
                                     </View>
                             </View>
                         </ScrollView>
