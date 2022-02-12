@@ -1,14 +1,11 @@
-import { StyleSheet, Text, View, Button, Pressable, Alert } from 'react-native';
+import { StyleSheet, View, Alert } from 'react-native';
 import SMButton from './mainButton'
 import { useNavigation } from '@react-navigation/native';
 import IconButton from './logoButton';
 
-import {useState, useEffect} from 'react';
-//second view footer
 
 import * as Linking from 'expo-linking'
 export default function RestaurantsFooter(props) {
-    //to use navigation without passing it as a prop
     const navigation = useNavigation();
 
     const {restaurantsData, index} = props.route;
@@ -16,10 +13,6 @@ export default function RestaurantsFooter(props) {
     const onRightPressCB = () => {
         if (restaurantsData.length - 1 != index){
             let newIndex = index + 1;
-            //console.log('Guardian 2');
-            //console.log(restaurantsData, newIndex);
-            //stupid error -> Passing newIndex and then trying to extract the variable index, instead of passing index as the 'key' name
-            //we are using replace() instead of navigate() so the scrollView position rerenders. Otherwise, it won't go back to it's original position
             navigation.replace('MyRestaurants', {restaurantsData, index: newIndex});
         } else {
             Alert.alert('Error', 'Already in the last restaurant')
@@ -28,13 +21,11 @@ export default function RestaurantsFooter(props) {
     const onLeftPressCB = () => {
         if (index != 0){
             let newIndex = index - 1;
-            //we are using replace() instead of navigate() so the scrollView position rerenders. Otherwise, it won't go back to it's original position
             navigation.replace('MyRestaurants', {restaurantsData, index: newIndex});
         } else {
             Alert.alert('Error', 'Already in the first restaurant')
         }
     }
-    //when loading the page we should calculate the postion to set teh left & right buttons availability
 
     const phoneCall = () => {
         Linking.openURL('tel:'+restaurantsData[index].phone)
@@ -63,7 +54,6 @@ const styles = StyleSheet.create({
         borderTopWidth: 3,
         width: '100%',
     },
-    //wraps the movility buttons (next / go back)
     movilityWrapper: {
         flex: 0,
         width: '100%',

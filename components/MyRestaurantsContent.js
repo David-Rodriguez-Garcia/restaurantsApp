@@ -10,25 +10,9 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 import { FlatList } from 'react-native-gesture-handler';
 
 export default function restaurantsContent(props) {
-    //const { name, phone, location, comments } = props.route;
-    const {restaurantsData, index} = props.route;
+	const {restaurantsData, index} = props.route;
 
-    {/*we can make this piece of code much cleaner with jsx*/ }
-    /*<Text style={[styles.title, {marginVertical: 10,         textDecorationLine: 'underline'
-}]}>{name}</Text>
-    <Text style={styles.fieldName}>Phone number:</Text>
-    <Text style={styles.fieldContent}>{phone}</Text>
-    <Text style={styles.fieldName}>Location:</Text>
-    <Text style={styles.fieldContent}>{location}</Text>
-    <Text style={styles.fieldName}>Comments:</Text>
-    <Text style={styles.fieldContent}>{comments}</Text>*/
-    {
-        /*TODO -> TRY USING THE JSX TO RETURN THE ELEMENTS
-        return (
-            
-        )*/
-    }
-    const DATA = [{ name: 'Name:', data: restaurantsData[index].name },
+	const DATA = [{ name: 'Name:', data: restaurantsData[index].name },
     { name: 'Phone:', data: restaurantsData[index].phone },
     { name: 'Location:', data: restaurantsData[index].location },
     { name: 'Comments:', data: restaurantsData[index].comments },
@@ -63,15 +47,6 @@ export default function restaurantsContent(props) {
                     }
                     )
                 }
-                {/*<Text style={[styles.title, {
-                    marginVertical: 10, textDecorationLine: 'underline'
-                }]}>{name}</Text>
-                <Text style={styles.fieldName}>Phone number:</Text>
-                <Text style={styles.fieldContent}>{phone}</Text>
-                <Text style={styles.fieldName}>Location:</Text>
-                <Text style={styles.fieldContent}>{location}</Text>
-                <Text style={styles.fieldName}>Comments:</Text>
-                <Text style={styles.fieldContent}>{comments}</Text>*/}
             </ScrollView>
         </View>
     )

@@ -1,4 +1,4 @@
-import { StyleSheet, Text, Pressable, Image } from 'react-native';
+import { StyleSheet, Pressable } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 export default function mainButton(props){

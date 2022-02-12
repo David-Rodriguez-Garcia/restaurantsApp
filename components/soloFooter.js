@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, Button, Pressable } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import SMButton from '../components/mainButton'
 
 export default function soloFooter(props){

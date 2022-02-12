@@ -1,8 +1,4 @@
-import { StyleSheet, Text, View, Button, Pressable, Alert } from 'react-native';
-import Constants from 'expo-constants';
-import { backgroundColor } from 'react-native/Libraries/Components/View/ReactNativeStyleAttributes';
-import SMButton from '../components/mainButton'
-import RestaurantsFooter from '../components/RestaurantsFooter'
+import { Text, View } from 'react-native';
 import {styles} from '../styles/principal'
 import HeaderTitle from '../components/headerTitle'
 import SoloFooter from '../components/soloFooter'
@@ -14,12 +10,10 @@ import AsyncStorage from '@react-native-async-storage/async-storage'
 
 const PreferencesScreen = ({navigation}) => {
 
-    //set the preferences correctly when leading
     useEffect(() => {
         getPref();
     }, []);
 
-    //get the prefferences to set it correctly
     const getPref = async () => {
         try {
             const pref = await AsyncStorage.getItem('RatingOrder');
@@ -30,7 +24,6 @@ const PreferencesScreen = ({navigation}) => {
             console.log(error);
         }
     }
-    //best rated first
     const [brf, setBrf] = useState(true)
 
     const BRF = async () => {
