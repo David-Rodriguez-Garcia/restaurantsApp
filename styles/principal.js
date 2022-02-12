@@ -53,7 +53,6 @@ const styles = StyleSheet.create({
         backgroundColor: 'transparent',
         overflow: 'hidden',
     },
-    //for the add restaurant form wrapper
     formWrapper: {
         flex: 1,
         width: '80%',
@@ -63,13 +62,10 @@ const styles = StyleSheet.create({
     formFieldView: {
         flex: 0,
         flexShrink: 0,
-        //flexWrap: 'wrap',this was a test for opening the keyboard
-        //without killing the UI
         width: '100%',
         alignItems: 'flex-start',
         justifyContent: 'flex-start'
     },
-    //if we use formTitle we have a styling already made for it - buttonDesc
     formTextInput: {
         borderWidth: 2,
         borderColor: 'white',
@@ -77,10 +73,7 @@ const styles = StyleSheet.create({
         paddingHorizontal: 10,
         width: '100%',
         color: 'white',
-        //flexShrink: 30,
-        //minWidth: '80%'
     },
-    //the view that contains the two buttons
     formButtonsView: {
         flexDirection: 'row',
         justifyContent: 'space-between',
@@ -92,7 +85,6 @@ const styles = StyleSheet.create({
         borderWidth: 3,
         borderColor: 'white',
         borderRadius: 50,
-        //backgroundColor: 'blue',
         alignItems: 'center',
         alignSelf: 'center',
         justifyContent: 'center',
@@ -101,9 +93,7 @@ const styles = StyleSheet.create({
         justifyContent: 'space-evenly',
         flex: 1,
         alignItems: 'center',
-        //backgroundColor: 'blue',
     },
-    //title that describes a logoButton outside of it
     buttonDesc: {
         fontSize: 18,
         color: 'white',
@@ -116,7 +106,6 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         color: 'white',
     },
-    //wraps up all the info about the restaurant. The data AND rating
     mainInfoView: {
         flex: 1,
         width: '100%',
@@ -129,24 +118,16 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         paddingVertical: 30,
     },
-    //for the view that wraps the info about the restaurants displayed - NOT THE RATING
     contentWrapper:{
-        //TODO - IMPORTANT. KNOW WHY ScrollView doesn't work well with flex: 1 - Interesting
-            //for that read -> https://medium.com/@peterpme/taming-react-natives-scrollview-with-flex-144e6ff76c08
-        //flex: 1,
         flexGrow: 1,
-        //justifyContent: 'space-around',
-        //alignItems: 'center',
         width: '70%',
     },
-    //for the title of the fields when displaying the restaurants
     fieldName: {
         fontWeight: 'bold',
         fontSize: 20,
         color: 'white',
         alignSelf: 'flex-start',
     },
-    //for the content to be displayed
     fieldContent: {
         fontStyle: 'italic',
         fontSize: 13,
