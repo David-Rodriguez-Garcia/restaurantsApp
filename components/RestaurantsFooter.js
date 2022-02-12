@@ -2,9 +2,8 @@ import { StyleSheet, View, Alert } from 'react-native';
 import SMButton from './mainButton'
 import { useNavigation } from '@react-navigation/native';
 import IconButton from './logoButton';
-
-
 import * as Linking from 'expo-linking'
+
 export default function RestaurantsFooter(props) {
     const navigation = useNavigation();
 

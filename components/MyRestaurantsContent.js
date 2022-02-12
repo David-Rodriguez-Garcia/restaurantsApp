@@ -1,13 +1,6 @@
-import { StyleSheet, Text, View, Button, Pressable, Image, ScrollView } from 'react-native';
-import Constants from 'expo-constants';
-import { backgroundColor } from 'react-native/Libraries/Components/View/ReactNativeStyleAttributes';
-import SMButton from '../components/mainButton'
-import RestaurantsFooter from '../components/RestaurantsFooter'
-import { styles } from '../styles/principal'
-import HeaderTitle from '../components/headerTitle'
-import IconButton from '../components/logoButton';
+import { Text, View, Image, ScrollView } from 'react-native';
+import { styles } from '../styles/principal';
 import Icon from 'react-native-vector-icons/FontAwesome';
-import { FlatList } from 'react-native-gesture-handler';
 
 export default function restaurantsContent(props) {
 	const {restaurantsData, index} = props.route;
